@@ -14,10 +14,10 @@ import tom from "../../assets/tom.png";
 import megan from "../../assets/megan.png";
 import cameron from "../../assets/cameron.png";
 
-const Sidebar = () => {
+const Sidebar = ({sidebar}) => {
   return (
     <>
-      <div className="sidebar">
+      <div className={`sidebar ${sidebar ?"" : "small_sidebar"}`}>
         <div className="shortcut_links">
           <div className="side_link">
             <img src={home} alt="" />

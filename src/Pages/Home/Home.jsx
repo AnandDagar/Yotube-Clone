@@ -1,11 +1,15 @@
 import React from "react";
 import "../../index.css";
-import Sidebar from "../../Components/Navbar/SIdebar";
+import Sidebar from "../../Components/Navbar/Sidebar";
+import Feed from "../../Components/Feed/Feed";
 
-const Home = () => {
+const Home = ({sidebar}) => {
   return (
     <>
-      <Sidebar />
+      <Sidebar sidebar={sidebar}/>
+      <div className={`container ${sidebar? "" : 'large_container'}`}>
+        <Feed/>
+      </div>
     </>
   );
 };
