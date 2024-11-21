@@ -5,6 +5,7 @@ import upload_icon from "../../assets/upload.png";
 import more_icon from "../../assets/more.png";
 import notification_icon from "../../assets/notification.png";
 import profile_icon from "../../assets/jack.png";
+import { Link } from "react-router-dom";
 const Navbar = ({setSidebar}) => {
   return (
     <>
@@ -13,9 +14,9 @@ const Navbar = ({setSidebar}) => {
           <div className="toggle_navbar">
             <img className="w-8" src={menu} alt="" onClick={()=> setSidebar(prev => prev === false ? true : false )}/>
           </div>
-          <div className="logo_section">
+          <Link to="/" className="logo_section">
             <img className="w-[150px]" src={logo} alt="" />
-          </div>
+          </Link>
         </div>
         <div className="center_menu">
           <div className="search_wrapper">
